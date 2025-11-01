@@ -1,0 +1,160 @@
+/* Import a similar font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Facebook's light grey background */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.facebook-page {
+    display: flex;
+    max-width: 980px; /* Standard desktop width for the content */
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Content (Text/Logo) */
+.text-content {
+    width: 50%;
+    padding-right: 32px;
+}
+
+.text-content h1 {
+    color: #1877f2; /* Facebook Blue */
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.75rem;
+    line-height: 32px;
+}
+
+/* Right Content (Form Card) */
+.form-card {
+    width: 400px;
+}
+
+.form-card form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card input {
+    height: 52px;
+    margin-bottom: 15px;
+    padding: 0 16px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+.form-card input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+.login-btn {
+    background-color: #1877f2; /* Login button blue */
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.forgot-link {
+    color: #1877f2;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.create-account-btn {
+    background-color: #42b72a; /* Create New Account green button */
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%; /* Adjust width to mimic Facebook's styling */
+    align-self: center;
+}
+
+.create-page-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 28px;
+}
+
+.create-page-link a {
+    text-decoration: none;
+    color: #1c1e21; /* Dark text color */
+}
+
+.create-page-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Media Query for Mobile/Tablet View (Max-width 900px) --- */
+@media (max-width: 900px) {
+    .container {
+        padding-top: 50px; /* Add some space at the top in mobile view */
+        align-items: flex-start; /* Align content to the top */
+    }
+
+    .facebook-page {
+        flex-direction: column; /* Stack logo/text and form vertically */
+        text-align: center;
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 50px; /* Space between logo/text and form */
+    }
+
+    .text-content p {
+        font-size: 1.25rem; /* Smaller text on mobile */
+    }
+
+    .form-card {
+        width: 100%;
+        max-width: 400px; /* Keep form maximum width reasonable */
+    }
+}
